@@ -1,136 +1,279 @@
-# LoRA Translation Adaptors — Dataset Collection
+# Triveni — LoRA Translation Pipeline
 
-This repository contains bilingual translation datasets and LoRA adaptor training data for **4 low-resource Indian language pairs**. Each folder is self-contained and ready to use for fine-tuning a seq2seq or decoder-only language model using the **LoRA (Low-Rank Adaptation)** method.
-
-All datasets support **bidirectional translation** — both directions are encoded in every sample.
-
----
-
-## Folder Overview
-
-| Folder | Languages | Direction | Total Pairs | Train | Val | Test |
-|--------|-----------|-----------|-------------|-------|-----|------|
-| [`eh/`](./eh/) | English ↔ Hoc (Ho) | `eng_hoc` / `hoc_eng` | 1,606 | 1,284 | 161 | 161 |
-| [`es/`](./es/) | English ↔ Santali | `eng_sat` / `sat_eng` | 62,607 | 50,085 | 6,260 | 6,262 |
-| [`he/`](./he/) | Hindi ↔ English | `eng_hin` / `hin_eng` | 2,867 | 2,293 | 286 | 288 |
-| [`ht/`](./ht/) | Hindi ↔ Mundari (Unr) | `hin_unr` / `unr_hin` | 17,809 | 14,247 | 1,780 | 1,782 |
-
-**Total across all datasets: 84,889 bilingual pairs**
+Neural machine translation for low-resource Indian tribal languages using LoRA fine-tuning.
+Translates between **Hindi, Ho, Santali, Mundari** and **English**.
 
 ---
 
-## Data Format
-
-Every split file (`.jsonl`) uses the same schema:
-
-```json
-{
-  "translation": {
-    "<direction_A>": { "source": "...", "target": "..." },
-    "<direction_B>": { "source": "...", "target": "..." }
-  }
-}
-```
-
-Each line is a complete, self-contained JSON object. The two direction keys (e.g. `eng_hoc` / `hoc_eng`) let you train both directions in a single pass.
-
----
-
-## Language Details
-
-| Code | Language | Family | Script |
-|------|----------|--------|--------|
-| `eng` | English | Indo-European (Germanic) | Latin |
-| `hoc` | Hoc / Ho | Austroasiatic (Munda) | Latin + diacritics |
-| `sat` | Santali | Austroasiatic (Munda) | Ol Chiki (ᱚᱞ ᱪᱤᱠᱤ) |
-| `hin` | Hindi | Indo-European (Indo-Aryan) | Devanagari |
-| `unr` | Mundari / Unr | Austroasiatic (Munda) | Devanagari |
-
----
-
-## Splits & Reproducibility
-
-All datasets were split with:
-- **Ratio**: 80% train / 10% validation / 10% test
-- **Random seed**: `42`
-- **Script**: `split_datasets.py` (included at root)
-
----
-
-## Training with LoRA
-
-### Recommended prompt format
-
-```
-Translate the following sentence from {source_lang} to {target_lang}:
-{source}
-Translation: {target}
-```
-
-### Tips
-
-- **Both directions in one adaptor**: Each sample already encodes both translation directions. Randomly pick one direction per training step to train a single adaptor that handles both.
-- **Tokeniser**: All languages use Unicode. Use a tokeniser with a broad multilingual vocabulary (e.g. `google/mt5-base`, `facebook/mbart-large-cc25`, `ai4bharat/indictrans2`, or `llama` with a multilingual tokeniser).
-- **LoRA target modules**: For encoder-decoder models, target `q_proj`, `v_proj` in both encoder and decoder. For decoder-only, target `q_proj`, `v_proj` in all transformer blocks.
-- **Low-resource languages** (`eh`, `he`): Use a lower learning rate and more epochs. Consider data augmentation via back-translation.
-
-### Example LoRA config (PEFT / HuggingFace)
-
-```python
-from peft import LoraConfig, TaskType
-
-lora_config = LoraConfig(
-    task_type=TaskType.SEQ_2_SEQ_LM,  # or CAUSAL_LM for decoder-only
-    r=16,
-    lora_alpha=32,
-    target_modules=["q_proj", "v_proj"],
-    lora_dropout=0.05,
-    bias="none",
-)
-```
-
----
-
-## Directory Structure
-
-```
-lora adaptor/
-├── eh/
-│   ├── train.jsonl
-│   ├── val.jsonl
-│   ├── test.jsonl
-│   ├── train-data_eng-hoc.json
-│   ├── validation-data_eng-hoc.json
-│   ├── test-data_eng-hoc.json
-│   └── README.md
-├── es/
-│   ├── train.jsonl
-│   ├── val.jsonl
-│   ├── test.jsonl
-│   ├── train.csv
-│   └── README.md
-├── he/
-│   ├── train.jsonl
-│   ├── val.jsonl
-│   ├── test.jsonl
-│   ├── DATASET.tsv
-│   └── README.md
-├── ht/
-│   ├── train.jsonl
-│   ├── val.jsonl
-│   ├── test.jsonl
-│   ├── translation-hi-unr.tsv
-│   └── README.md
-├── split_datasets.py   # Data splitting script
-└── README.md           # This file
-```
-
----
-
-## Regenerating the Splits
+## Quick Start (for teammates)
 
 ```bash
-python split_datasets.py
+# 1. Clone
+git clone https://github.com/ArjunTate1/Triveni.git
+cd Triveni
+
+# 2. Install dependencies
+pip install torch transformers peft datasets accelerate sentencepiece sacrebleu tqdm
+
+# 3. Translate immediately — no training needed, adaptors are included
+python pipeline.py --src hin --tgt hoc --text "आप कैसे हैं?"
+python pipeline.py --src hin --tgt eng --text "नमस्ते दुनिया"
+python pipeline.py --list_routes
 ```
 
-This re-reads the original source files and regenerates all JSONL splits from scratch.
+> The base model (`Helsinki-NLP/opus-mt-mul-en`, ~300 MB) downloads automatically
+> from HuggingFace on first run. Internet required once.
+
+---
+
+## Supported Languages
+
+| Code  | Language | Script           |
+|-------|----------|------------------|
+| `hin` | Hindi    | Devanagari       |
+| `eng` | English  | Latin            |
+| `hoc` | Ho       | Latin+diacritics |
+| `sat` | Santali  | Ol Chiki         |
+| `unr` | Mundari  | Devanagari       |
+
+---
+
+## Translation Routes
+
+### Currently available (trained adaptors included)
+
+| Route | Model | Status |
+|-------|-------|--------|
+| Hindi ↔ English | `he` adaptor | ✅ Ready |
+| English ↔ Ho | `eh` adaptor | ✅ Ready |
+| **Hindi → Ho** | `he` + `eh` (pivot via English) | ✅ Ready |
+| **Ho → Hindi** | `eh` + `he` (pivot via English) | ✅ Ready |
+
+### Coming soon (training in progress)
+
+| Route | Model | Status |
+|-------|-------|--------|
+| Hindi ↔ Mundari | `ht` adaptor | 🔄 Training |
+| English ↔ Santali | `es` adaptor | 🔄 Training |
+| Hindi → Santali | `he` + `es` (pivot) | 🔄 Training |
+
+---
+
+## Usage
+
+### pipeline.py — recommended for all translations
+
+```bash
+# Hindi → Ho  (pivot: Hindi → English → Ho)
+python pipeline.py --src hin --tgt hoc --text "आप कहाँ जा रहे हैं?"
+
+# Ho → Hindi
+python pipeline.py --src hoc --tgt hin --text "Ape do okon renko?"
+
+# Hindi → English
+python pipeline.py --src hin --tgt eng --text "नमस्ते, आप कैसे हैं?"
+
+# English → Hindi
+python pipeline.py --src eng --tgt hin --text "Where are you going?"
+
+# Show intermediate pivot steps
+python pipeline.py --src hin --tgt hoc --text "नमस्ते" --show_steps
+
+# Translate a file (one sentence per line)
+python pipeline.py --src hin --tgt hoc --file input.txt --output output.txt
+
+# List all available routes
+python pipeline.py --list_routes
+```
+
+### translate.py — single model, direct control
+
+```bash
+# Hindi → English
+python translate.py --pair he --direction hin_eng --text "आप कैसे हैं?"
+
+# English → Hindi
+python translate.py --pair he --direction eng_hin --text "How are you?"
+
+# English → Ho
+python translate.py --pair eh --direction eng_hoc --text "Where are you going?"
+
+# Ho → English
+python translate.py --pair eh --direction hoc_eng --text "Ape do okon renko?"
+```
+
+### Python API
+
+```python
+from pipeline import TranslationPipeline
+
+pipe = TranslationPipeline()
+
+# Single translation
+result = pipe.translate("आप कैसे हैं?", src="hin", tgt="hoc")
+print(result)
+
+# Batch translation
+results = pipe.translate_batch(
+    ["नमस्ते", "आप कैसे हैं?", "कहाँ जा रहे हो?"],
+    src="hin",
+    tgt="hoc"
+)
+
+# See pivot steps
+data = pipe.translate("नमस्ते", "hin", "hoc", return_intermediate=True)
+for step in data["steps"]:
+    print(f"{step['pair']}: {step['input']} -> {step['output']}")
+```
+
+---
+
+## Project Structure
+
+```
+Triveni/
+├── config.py             # All settings: model, LoRA params, routes
+├── dataset_utils.py      # Data loading and prompt formatting
+├── train.py              # LoRA fine-tuning (one language pair)
+├── train_all.ps1         # Train all pairs sequentially (Windows)
+├── translate.py          # Single-pair inference
+├── pipeline.py           # Full pipeline with pivot routing
+├── evaluate.py           # BLEU / chrF evaluation
+├── split_datasets.py     # Raw data → train/val/test splits
+│
+├── adaptors/             # Trained LoRA weights (included in repo)
+│   ├── he/               # Hindi ↔ English adaptor ✅
+│   │   ├── adapter_config.json
+│   │   ├── adapter_model.safetensors
+│   │   └── ...tokenizer files
+│   └── eh/               # English ↔ Ho adaptor ✅
+│       ├── adapter_config.json
+│       ├── adapter_model.safetensors
+│       └── ...tokenizer files
+│
+├── he/                   # Hindi ↔ English dataset
+│   ├── train.jsonl
+│   ├── val.jsonl
+│   └── test.jsonl
+└── eh/                   # English ↔ Ho dataset
+    ├── train.jsonl
+    ├── val.jsonl
+    └── test.jsonl
+```
+
+---
+
+## Training Your Own Adaptors
+
+If you want to train the remaining pairs (`es`, `ht`) or retrain existing ones:
+
+```bash
+# Train one pair
+python train.py --pair ht          # Hindi ↔ Mundari
+python train.py --pair es          # English ↔ Santali
+
+# Resume an interrupted run
+python train.py --pair es --resume
+
+# Train all 4 pairs (Windows PowerShell)
+.\train_all.ps1
+
+# Quick test run (200 samples, no evaluation)
+.\train_all.ps1 -MaxSamples 200 -NoEval
+```
+
+Trained adaptors are saved to `adaptors/<pair_id>/`.
+
+---
+
+## Evaluation
+
+```bash
+# Evaluate a trained adaptor on the test set
+python evaluate.py --pair he
+python evaluate.py --pair eh
+python evaluate.py --all           # all pairs
+
+# Quick check on 100 samples
+python evaluate.py --pair he --max_samples 100
+```
+
+Results saved to `results/`.
+
+---
+
+## How It Works
+
+### LoRA (Low-Rank Adaptation)
+
+Instead of fine-tuning the full ~78M parameter base model, LoRA trains only
+**~590K parameters (0.75%)** injected into the attention layers. This means:
+
+- Each adaptor is only **~2.3 MB** (vs ~300 MB for a full model)
+- Training is fast even on CPU
+- The same base model is shared across all 4 language pairs
+
+### Pivot Translation
+
+No direct Hindi ↔ Ho or Hindi ↔ Santali dataset exists, so those routes chain two models:
+
+```
+Hindi → Ho:
+  Hindi --[he adaptor]--> English --[eh adaptor]--> Ho
+
+Ho → Hindi:
+  Ho --[eh adaptor]--> English --[he adaptor]--> Hindi
+```
+
+This is handled automatically by `pipeline.py` — just specify `--src` and `--tgt`.
+
+### Base Model
+
+All adaptors are built on top of `Helsinki-NLP/opus-mt-mul-en` (MarianMT).
+For production quality on a GPU, switch `BASE_MODEL` in `config.py` to
+`ai4bharat/indictrans2-indic-en-1B`.
+
+---
+
+## Dataset Stats
+
+| Folder | Pair              | Train   | Val   | Test  | Total  |
+|--------|-------------------|---------|-------|-------|--------|
+| `he/`  | Hindi ↔ English   | 2,293   | 286   | 288   | 2,867  |
+| `eh/`  | English ↔ Ho      | 1,284   | 161   | 161   | 1,606  |
+| `es/`  | English ↔ Santali | 50,085  | 6,260 | 6,262 | 62,607 |
+| `ht/`  | Hindi ↔ Mundari   | 14,247  | 1,780 | 1,782 | 17,809 |
+
+> `es/` and `ht/` datasets are included for training but adaptors not yet pushed.
+
+---
+
+## Requirements
+
+```
+Python >= 3.9
+torch >= 2.0
+transformers >= 5.0
+peft >= 0.20
+datasets
+accelerate
+sentencepiece
+sacrebleu
+tqdm
+```
+
+Install all at once:
+```bash
+pip install torch transformers peft datasets accelerate sentencepiece sacrebleu tqdm
+```
+
+---
+
+## Roadmap
+
+- [x] Hindi ↔ English (LoRA adaptor)
+- [x] English ↔ Ho (LoRA adaptor)
+- [x] Hindi → Ho pivot pipeline
+- [ ] English ↔ Santali (LoRA adaptor)
+- [ ] Hindi ↔ Mundari (LoRA adaptor)
+- [ ] Voice-to-voice: ASR + pipeline + TTS
