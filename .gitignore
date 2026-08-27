@@ -9,9 +9,10 @@ __pycache__/
 # Training checkpoints (large, not needed — use adapter_model.safetensors instead)
 adaptors/*/checkpoint-*/
 
-# Incomplete / untrained adaptor folders (push only when fully trained)
+# Adaptors not yet pushed
 adaptors/es/
-adaptors/ht/
+adaptors/he/
+adaptors/eh/
 
 # Generated at runtime
 results/
