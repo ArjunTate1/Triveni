@@ -1,206 +1,189 @@
 ---
 base_model: Helsinki-NLP/opus-mt-mul-en
 library_name: peft
+language:
+  - hi
+  - unr
 tags:
-- base_model:adapter:Helsinki-NLP/opus-mt-mul-en
-- lora
-- transformers
+  - lora
+  - translation
+  - low-resource
+  - indic-languages
+  - mundari
+  - hindi
+  - peft
+  - transformers
 ---
 
-# Model Card for Model ID
+# Triveni — Hindi ↔ Mundari (ht) LoRA Adaptor
 
-<!-- Provide a quick summary of what the model is/does. -->
+A LoRA fine-tuned translation model for **Hindi ↔ Mundari (Unr)** — a low-resource
+Austroasiatic language spoken primarily in Jharkhand and Odisha, India.
 
+Part of the **Triveni** project: LoRA translation adaptors for Indian tribal languages.
 
+---
 
 ## Model Details
 
-### Model Description
+| Property | Value |
+|----------|-------|
+| Base model | `Helsinki-NLP/opus-mt-mul-en` (MarianMT) |
+| Fine-tuning method | LoRA (Low-Rank Adaptation) |
+| Task | Bidirectional seq2seq translation |
+| Languages | Hindi (`hin`) ↔ Mundari (`unr`) |
+| Mundari script | Devanagari |
+| Hindi script | Devanagari |
+| Trainable params | 589,824 / 78,108,672 (0.76%) |
+| Adaptor size | ~2.3 MB |
+| Developed by | Arjun Tate |
+| Framework | HuggingFace Transformers + PEFT 0.20.0 |
 
-<!-- Provide a longer summary of what this model is. -->
+---
 
+## Quick Start
 
+### Install dependencies
 
-- **Developed by:** [More Information Needed]
-- **Funded by [optional]:** [More Information Needed]
-- **Shared by [optional]:** [More Information Needed]
-- **Model type:** [More Information Needed]
-- **Language(s) (NLP):** [More Information Needed]
-- **License:** [More Information Needed]
-- **Finetuned from model [optional]:** [More Information Needed]
+```bash
+pip install torch transformers peft sentencepiece
+```
 
-### Model Sources [optional]
+### Load and translate
 
-<!-- Provide the basic links for the model. -->
+```python
+from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+from peft import PeftModel
 
-- **Repository:** [More Information Needed]
-- **Paper [optional]:** [More Information Needed]
-- **Demo [optional]:** [More Information Needed]
+BASE_MODEL = "Helsinki-NLP/opus-mt-mul-en"
+ADAPTOR    = "adaptors/ht"   # path to this folder after cloning
 
-## Uses
+# Load
+tokenizer = AutoTokenizer.from_pretrained(ADAPTOR)
+base  = AutoModelForSeq2SeqLM.from_pretrained(BASE_MODEL)
+model = PeftModel.from_pretrained(base, ADAPTOR)
+model = model.merge_and_unload()   # merge for faster inference
+model.eval()
 
-<!-- Address questions around how the model is intended to be used, including the foreseeable users of the model and those affected by the model. -->
+def translate(text, src_lang, tgt_lang):
+    prompt = (
+        f"Translate the following sentence from {src_lang} to {tgt_lang}:\n"
+        f"{text}\n"
+        f"Translation:"
+    )
+    inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=128)
+    output = model.generate(**inputs, num_beams=4, max_length=256)
+    return tokenizer.decode(output[0], skip_special_tokens=True)
 
-### Direct Use
+# Hindi -> Mundari
+print(translate("आप कहाँ जा रहे हैं?", "Hindi", "Mundari"))
 
-<!-- This section is for the model use without fine-tuning or plugging into a larger ecosystem/app. -->
+# Mundari -> Hindi
+print(translate("ञाम ओकोन रेन्को?", "Mundari", "Hindi"))
+```
 
-[More Information Needed]
+---
 
-### Downstream Use [optional]
+## Supported Directions
 
-<!-- This section is for the model use when fine-tuned for a task, or when plugged into a larger ecosystem/app -->
+| Direction key | From | To |
+|---------------|------|----|
+| `hin_unr` | Hindi | Mundari |
+| `unr_hin` | Mundari | Hindi |
 
-[More Information Needed]
-
-### Out-of-Scope Use
-
-<!-- This section addresses misuse, malicious use, and uses that the model will not work well for. -->
-
-[More Information Needed]
-
-## Bias, Risks, and Limitations
-
-<!-- This section is meant to convey both technical and sociotechnical limitations. -->
-
-[More Information Needed]
-
-### Recommendations
-
-<!-- This section is meant to convey recommendations with respect to the bias, risk, and technical limitations. -->
-
-Users (both direct and downstream) should be made aware of the risks, biases and limitations of the model. More information needed for further recommendations.
-
-## How to Get Started with the Model
-
-Use the code below to get started with the model.
-
-[More Information Needed]
+---
 
 ## Training Details
 
-### Training Data
+### Dataset
 
-<!-- This should link to a Dataset Card, perhaps with a short stub of information on what the training data is all about as well as documentation related to data pre-processing or additional filtering. -->
+| Split | Pairs |
+|-------|-------|
+| Train | 14,247 |
+| Val   | 1,780  |
+| Test  | 1,782  |
+| **Total** | **17,809** |
 
-[More Information Needed]
+Source: Hindi ↔ Mundari (Unr) parallel corpus. Both translation directions are
+encoded in every training sample — the model is trained to translate in both
+directions in a single pass.
 
-### Training Procedure
+### LoRA Configuration
 
-<!-- This relates heavily to the Technical Specifications. Content here should link to that section when it is relevant to the training procedure. -->
+```python
+LoraConfig(
+    task_type     = TaskType.SEQ_2_SEQ_LM,
+    r             = 16,
+    lora_alpha    = 32,
+    lora_dropout  = 0.05,
+    bias          = "none",
+    target_modules = ["q_proj", "v_proj"],
+)
+```
 
-#### Preprocessing [optional]
+### Training Hyperparameters
 
-[More Information Needed]
+| Parameter | Value |
+|-----------|-------|
+| Epochs | 5 |
+| Batch size | 4 |
+| Gradient accumulation steps | 4 (effective batch = 16) |
+| Learning rate | 3e-4 |
+| Warmup steps | 100 |
+| Weight decay | 0.01 |
+| Optimizer | AdamW |
+| Precision | fp32 (CPU) |
+| Seed | 42 |
 
+### Training Results
 
-#### Training Hyperparameters
+| Epoch | Eval Loss |
+|-------|-----------|
+| 1 | 4.5841 |
+| 2 | 4.1712 |
+| 3 | 3.9667 |
+| 4 | 3.8680 |
+| 5 | **3.8359** |
 
-- **Training regime:** [More Information Needed] <!--fp32, fp16 mixed precision, bf16 mixed precision, bf16 non-mixed precision, fp16 non-mixed precision, fp8 mixed precision -->
+- Training loss: 139.54 → 16.45 (start → end)
+- Total training steps: 8,905
+- Best eval loss: **3.8359** (epoch 5)
 
-#### Speeds, Sizes, Times [optional]
+---
 
-<!-- This section provides information about throughput, start/end time, checkpoint size if relevant, etc. -->
+## Files in This Adaptor
 
-[More Information Needed]
+| File | Purpose |
+|------|---------|
+| `adapter_model.safetensors` | Trained LoRA weights |
+| `adapter_config.json` | LoRA architecture config |
+| `tokenizer_config.json` | Tokenizer settings |
+| `source.spm` | Source SentencePiece vocabulary |
+| `target.spm` | Target SentencePiece vocabulary |
+| `vocab.json` | Token → ID mappings |
 
-## Evaluation
+---
 
-<!-- This section describes the evaluation protocols and provides the results. -->
+## Limitations
 
-### Testing Data, Factors & Metrics
+- Trained on **17,809 pairs** — reasonable for a low-resource language but
+  translations may be imperfect for complex or domain-specific sentences.
+- Base model (`opus-mt-mul-en`) is English-centric. For better quality,
+  retrain on `ai4bharat/indictrans2-indic-en-1B` with a GPU.
+- No direct Hindi ↔ Ho or Hindi ↔ Santali model in this adaptor — see the
+  Triveni repo for pivot pipelines.
 
-#### Testing Data
+---
 
-<!-- This should link to a Dataset Card if possible. -->
+## Part of Triveni
 
-[More Information Needed]
+This adaptor is one of four being developed in the Triveni project:
 
-#### Factors
+| Adaptor | Pair | Status |
+|---------|------|--------|
+| `ht` | Hindi ↔ Mundari | ✅ This model |
+| `he` | Hindi ↔ English | ✅ Trained |
+| `eh` | English ↔ Ho | ✅ Trained |
+| `es` | English ↔ Santali | 🔄 In progress |
 
-<!-- These are the things the evaluation is disaggregating by, e.g., subpopulations or domains. -->
-
-[More Information Needed]
-
-#### Metrics
-
-<!-- These are the evaluation metrics being used, ideally with a description of why. -->
-
-[More Information Needed]
-
-### Results
-
-[More Information Needed]
-
-#### Summary
-
-
-
-## Model Examination [optional]
-
-<!-- Relevant interpretability work for the model goes here -->
-
-[More Information Needed]
-
-## Environmental Impact
-
-<!-- Total emissions (in grams of CO2eq) and additional considerations, such as electricity usage, go here. Edit the suggested text below accordingly -->
-
-Carbon emissions can be estimated using the [Machine Learning Impact calculator](https://mlco2.github.io/impact#compute) presented in [Lacoste et al. (2019)](https://arxiv.org/abs/1910.09700).
-
-- **Hardware Type:** [More Information Needed]
-- **Hours used:** [More Information Needed]
-- **Cloud Provider:** [More Information Needed]
-- **Compute Region:** [More Information Needed]
-- **Carbon Emitted:** [More Information Needed]
-
-## Technical Specifications [optional]
-
-### Model Architecture and Objective
-
-[More Information Needed]
-
-### Compute Infrastructure
-
-[More Information Needed]
-
-#### Hardware
-
-[More Information Needed]
-
-#### Software
-
-[More Information Needed]
-
-## Citation [optional]
-
-<!-- If there is a paper or blog post introducing the model, the APA and Bibtex information for that should go in this section. -->
-
-**BibTeX:**
-
-[More Information Needed]
-
-**APA:**
-
-[More Information Needed]
-
-## Glossary [optional]
-
-<!-- If relevant, include terms and calculations in this section that can help readers understand the model or model card. -->
-
-[More Information Needed]
-
-## More Information [optional]
-
-[More Information Needed]
-
-## Model Card Authors [optional]
-
-[More Information Needed]
-
-## Model Card Contact
-
-[More Information Needed]
-### Framework versions
-
-- PEFT 0.20.0
+Repository: [github.com/ArjunTate1/Triveni](https://github.com/ArjunTate1/Triveni)
