@@ -1,35 +1,28 @@
 # Python
 __pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-.Python
+*.pyc
+.venv/
+venv/
 *.egg-info/
 
-# Training checkpoints (large, not needed — use adapter_model.safetensors instead)
-adaptors/*/checkpoint-*/
-
-# Incomplete / untrained adaptor folders (push only when fully trained)
-adaptors/es/
-adaptors/ht/
+# Model weights — too large for git, download/train separately
+hindi-mundari-final/
+*.bin
+*.safetensors
+*.pt
+*.onnx
 
 # Generated at runtime
-results/
-logs/
+output/text/*
+output/audio/*
+!output/text/.gitkeep
+!output/audio/.gitkeep
 
-# Raw source files (large, already processed into .jsonl)
-he/DATASET.tsv
-eh/train-data_eng-hoc.json
-eh/validation-data_eng-hoc.json
-eh/test-data_eng-hoc.json
-ht/translation-hi-unr.tsv
-es/train.csv
-
-# Jupyter / IDE
-.ipynb_checkpoints/
+# OS / editor
+.DS_Store
 .vscode/
 .idea/
 
-# OS
-.DS_Store
-Thumbs.db
+# Web Frontend (backend branch)
+frontend/
+
