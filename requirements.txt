@@ -1,0 +1,48 @@
+# =============================================================================
+# NIPUN Offline - Python Dependencies
+# =============================================================================
+#
+# REQUIRED FOR TERMINAL PROTOTYPE:
+# ---------------------------------
+
+# PDF Generation - create worksheets, flashcards, assessments with Hindi support
+# REQUIRED at runtime for PDF export functionality
+reportlab==4.0.7
+
+# =============================================================================
+# OPTIONAL FOR TESTING:
+# ---------------------------------
+
+# Testing framework - for running test suite
+# OPTIONAL - only needed for development/testing
+pytest==7.4.3
+
+# =============================================================================
+# OPTIONAL FOR WEB INTERFACE (NOT NEEDED FOR TERMINAL PROTOTYPE):
+# ---------------------------------
+
+# Web framework - lightweight local API server
+# OPTIONAL - only needed if you want to use the web interface
+fastapi==0.104.1
+
+# ASGI server - runs FastAPI locally
+# OPTIONAL - only needed if you want to use the web interface
+uvicorn==0.24.0
+
+# =============================================================================
+# NOT INCLUDED (BY DESIGN):
+# ---------------------------------
+# requests - NO external HTTP requests
+# openai - NO AI APIs
+# google-generativeai - NO cloud LLMs
+# torch/tensorflow - NO ML models
+# transformers - NO large language models
+# firebase - NO cloud database
+# mongodb - NO external database
+# =============================================================================
+
+# MINIMAL INSTALLATION FOR TERMINAL PROTOTYPE:
+# pip install reportlab
+
+# FULL INSTALLATION (including web interface and testing):
+# pip install -r requirements.txt

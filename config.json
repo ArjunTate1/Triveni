@@ -1,0 +1,19 @@
+{
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8000
+  },
+  "data_paths": {
+    "nipun": "data/nipun",
+    "dictionaries": "data/dictionaries",
+    "templates": "data/templates"
+  },
+  "assets": {
+    "images": "assets/images",
+    "fonts": "assets/fonts"
+  },
+  "memory_optimization": {
+    "lazy_load": true,
+    "max_grade_cache": 2
+  }
+}

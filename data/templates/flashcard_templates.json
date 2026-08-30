@@ -1,0 +1,133 @@
+{
+  "numbers_1_to_10": [
+    {"front": "1️⃣", "back": "एक (One)", "example": "🍎 एक सेब"},
+    {"front": "2️⃣", "back": "दो (Two)", "example": "🐕 दो कुत्ते"},
+    {"front": "3️⃣", "back": "तीन (Three)", "example": "⭐ तीन तारे"},
+    {"front": "4️⃣", "back": "चार (Four)", "example": "🌸 चार फूल"},
+    {"front": "5️⃣", "back": "पाँच (Five)", "example": "🖐️ पाँच उंगलियां"},
+    {"front": "6️⃣", "back": "छह (Six)", "example": "🍌 छह केले"},
+    {"front": "7️⃣", "back": "सात (Seven)", "example": "🦋 सात तितलियां"},
+    {"front": "8️⃣", "back": "आठ (Eight)", "example": "🐦 आठ चिड़िया"},
+    {"front": "9️⃣", "back": "नौ (Nine)", "example": "⚽ नौ गेंदें"},
+    {"front": "🔟", "back": "दस (Ten)", "example": "✏️ दस पेंसिलें"}
+  ],
+  "numbers_11_to_20": [
+    {"front": "11", "back": "ग्यारह (Eleven)", "example": "11 🍬 टॉफी"},
+    {"front": "12", "back": "बारह (Twelve)", "example": "12 🎈 गुब्बारे"},
+    {"front": "13", "back": "तेरह (Thirteen)", "example": "13 📚 किताबें"},
+    {"front": "14", "back": "चौदह (Fourteen)", "example": "14 🖍️ क्रेयॉन"},
+    {"front": "15", "back": "पंद्रह (Fifteen)", "example": "15 🌺 फूल"},
+    {"front": "16", "back": "सोलह (Sixteen)", "example": "16 🍓 स्ट्रॉबेरी"},
+    {"front": "17", "back": "सत्रह (Seventeen)", "example": "17 🐛 कीड़े"},
+    {"front": "18", "back": "अठारह (Eighteen)", "example": "18 🍇 अंगूर"},
+    {"front": "19", "back": "उन्नीस (Nineteen)", "example": "19 🧸 खिलौने"},
+    {"front": "20", "back": "बीस (Twenty)", "example": "20 🥜 मूंगफली"}
+  ],
+  "shapes": [
+    {"front": "⭕ वृत्त", "back": "Circle (गोला)", "example": "🌕 चांद, ⚽ गेंद, 🍊 संतरा"},
+    {"front": "🔺 त्रिकोण", "back": "Triangle (तीन कोने)", "example": "⛰️ पहाड़, 🍕 पिज्जा का टुकड़ा"},
+    {"front": "🟦 वर्ग", "back": "Square (चार बराबर भुजा)", "example": "🪟 खिड़की, 📦 डिब्बा"},
+    {"front": "▭ आयत", "back": "Rectangle (लंबा वर्ग)", "example": "📱 मोबाइल, 📖 किताब, 🚪 दरवाजा"},
+    {"front": "⬟ षट्भुज", "back": "Hexagon (छह भुजा)", "example": "🐝 मधुमक्खी का छत्ता"},
+    {"front": "⭐ तारा", "back": "Star (सितारा)", "example": "🌟 रात का तारा"},
+    {"front": "💗 हृदय", "back": "Heart (दिल)", "example": "❤️ प्यार का चिन्ह"},
+    {"front": "🥚 अंडाकार", "back": "Oval (लंबा गोला)", "example": "🥚 अंडा, 🏉 रग्बी गेंद"}
+  ],
+  "vowels": [
+    {"front": "अ", "back": "a (अ)", "example": "🍉 अनार, 🏥 अस्पताल"},
+    {"front": "आ", "back": "aa (आ)", "example": "🥭 आम, 🪞 आईना"},
+    {"front": "इ", "back": "i (इ)", "example": "🧱 ईंट, 🏛️ इमारत"},
+    {"front": "ई", "back": "ee (ई)", "example": "🎯 ईख, 🐝 ईश्वर"},
+    {"front": "उ", "back": "u (उ)", "example": "🦉 उल्लू, ☁️ उड़ना"},
+    {"front": "ऊ", "back": "oo (ऊ)", "example": "🧶 ऊन, 🐫 ऊंट"},
+    {"front": "ए", "back": "e (ए)", "example": "1️⃣ एक, 👓 ऐनक"},
+    {"front": "ऐ", "back": "ai (ऐ)", "example": "👓 ऐनक, 🏛️ ऐतिहासिक"},
+    {"front": "ओ", "back": "o (ओ)", "example": "🌧️ ओस, 🏺 ओखली"},
+    {"front": "औ", "back": "au (औ)", "example": "👩 औरत, 💊 औषधि"},
+    {"front": "अं", "back": "an (अं)", "example": "🍇 अंगूर, ⚓ अंक"},
+    {"front": "अः", "back": "ah (अः)", "example": "🌅 प्रातः, 📜 अतः"}
+  ],
+  "consonants_ka_varg": [
+    {"front": "क", "back": "ka (क)", "example": "🪷 कमल, 🪑 कुर्सी, 🐈 बिल्ली (killi)"},
+    {"front": "ख", "back": "kha (ख)", "example": "🐰 खरगोश, 🪟 खिड़की, 🍪 खाना"},
+    {"front": "ग", "back": "ga (ग)", "example": "🏡 घर, 🪴 गमला, 🐄 गाय"},
+    {"front": "घ", "back": "gha (घ)", "example": "🏠 घर, ⏰ घड़ी, 🐴 घोड़ा"},
+    {"front": "ङ", "back": "nga (ङ)", "example": "🔔 घंटा, 🍇 अंगूर"}
+  ],
+  "consonants_cha_varg": [
+    {"front": "च", "back": "cha (च)", "example": "🌙 चाँद, 🦅 चील, 🍵 चाय"},
+    {"front": "छ", "back": "chha (छ)", "example": "☂️ छाता, 🪵 छड़ी, 🎯 छः"},
+    {"front": "ज", "back": "ja (ज)", "example": "💧 जल, 🚢 जहाज़, 🌍 जमीन"},
+    {"front": "झ", "back": "jha (झ)", "example": "🏞️ झरना, ⛺ झोपड़ी, 🪣 झाड़ू"},
+    {"front": "ञ", "back": "nya (ञ)", "example": "🧠 ज्ञान, 🔔 झंझट"}
+  ],
+  "consonants_ta_varg": [
+    {"front": "ट", "back": "ta (ट)", "example": "🍅 टमाटर, 🚂 टे्रन, 📺 टीवी"},
+    {"front": "ठ", "back": "tha (ठ)", "example": "❄️ ठंडा, 🪵 ठोस"},
+    {"front": "ड", "back": "da (ड)", "example": "🥁 डमरू, 📮 डाक, 😨 डर"},
+    {"front": "ढ", "back": "dha (ढ)", "example": "🥁 ढोल, 🏔️ ढलान"},
+    {"front": "ण", "back": "na (ण)", "example": "🔔 घंटा, 📿 गण"}
+  ],
+  "simple_words_animals": [
+    {"front": "🐕 कुत्ता", "back": "Dog (कुत्ता)", "example": "वफादार जानवर"},
+    {"front": "🐈 बिल्ली", "back": "Cat (बिल्ली)", "example": "म्याऊं म्याऊं करती है"},
+    {"front": "🐄 गाय", "back": "Cow (गाय)", "example": "दूध देती है 🥛"},
+    {"front": "🐘 हाथी", "back": "Elephant (हाथी)", "example": "सबसे बड़ा जानवर"},
+    {"front": "🐒 बंदर", "back": "Monkey (बंदर)", "example": "🍌 केला खाता है"},
+    {"front": "🦁 शेर", "back": "Lion (शेर)", "example": "जंगल का राजा"},
+    {"front": "🐯 बाघ", "back": "Tiger (बाघ)", "example": "धारीदार जानवर"},
+    {"front": "🐰 खरगोश", "back": "Rabbit (खरगोश)", "example": "कूदता है 🥕 गाजर खाता है"},
+    {"front": "🦜 तोता", "back": "Parrot (तोता)", "example": "हरा पक्षी 🗣️ बोलता है"},
+    {"front": "🐦 चिड़िया", "back": "Bird (चिड़िया)", "example": "उड़ती है 🪹 घोंसला बनाती है"}
+  ],
+  "simple_words_family": [
+    {"front": "👨 पिता", "back": "Father (पिताजी/पापा)", "example": "घर का मुखिया"},
+    {"front": "👩 माता", "back": "Mother (माताजी/मम्मी)", "example": "प्यार करती है 💝"},
+    {"front": "👦 भाई", "back": "Brother (भाई)", "example": "बेटा, साथ खेलता है"},
+    {"front": "👧 बहन", "back": "Sister (बहन)", "example": "बेटी, साथ खेलती है"},
+    {"front": "👴 दादा", "back": "Grandfather (दादाजी)", "example": "पिता के पिता"},
+    {"front": "👵 दादी", "back": "Grandmother (दादीजी)", "example": "पिता की माँ"},
+    {"front": "👨‍👩‍👧‍👦 परिवार", "back": "Family (परिवार)", "example": "सब साथ रहते हैं 🏠"}
+  ],
+  "simple_words_body": [
+    {"front": "👁️ आँख", "back": "Eye (आँख)", "example": "देखने के लिए"},
+    {"front": "👂 कान", "back": "Ear (कान)", "example": "सुनने के लिए"},
+    {"front": "👃 नाक", "back": "Nose (नाक)", "example": "सूंघने के लिए"},
+    {"front": "👄 मुँह", "back": "Mouth (मुँह)", "example": "खाने और बोलने के लिए"},
+    {"front": "🦷 दाँत", "back": "Teeth (दाँत)", "example": "चबाने के लिए"},
+    {"front": "✋ हाथ", "back": "Hand (हाथ)", "example": "पकड़ने के लिए"},
+    {"front": "🦶 पैर", "back": "Leg/Foot (पैर)", "example": "चलने के लिए"},
+    {"front": "💇 बाल", "back": "Hair (बाल)", "example": "सिर पर होते हैं"}
+  ],
+  "simple_words_colors": [
+    {"front": "🔴 लाल", "back": "Red (लाल रंग)", "example": "🍎 सेब, 🌹 गुलाब"},
+    {"front": "🔵 नीला", "back": "Blue (नीला रंग)", "example": "🌊 पानी, 🌌 आकाश"},
+    {"front": "🟡 पीला", "back": "Yellow (पीला रंग)", "example": "🌞 सूरज, 🍋 नींबू"},
+    {"front": "🟢 हरा", "back": "Green (हरा रंग)", "example": "🌱 पेड़, 🍃 पत्ते"},
+    {"front": "🟠 नारंगी", "back": "Orange (नारंगी रंग)", "example": "🍊 संतरा, 🥕 गाजर"},
+    {"front": "🟣 बैंगनी", "back": "Purple (बैंगनी रंग)", "example": "🍇 अंगूर"},
+    {"front": "🟤 भूरा", "back": "Brown (भूरा रंग)", "example": "🪵 लकड़ी, 🐻 भालू"},
+    {"front": "⚫ काला", "back": "Black (काला रंग)", "example": "🌑 रात, ✒️ स्याही"},
+    {"front": "⚪ सफेद", "back": "White (सफेद रंग)", "example": "☁️ बादल, 🥛 दूध"},
+    {"front": "🩷 गुलाबी", "back": "Pink (गुलाबी रंग)", "example": "🌸 फूल"}
+  ],
+  "simple_words_fruits": [
+    {"front": "🍎 सेब", "back": "Apple (सेब)", "example": "लाल और मीठा 🔴"},
+    {"front": "🍌 केला", "back": "Banana (केला)", "example": "पीला फल 🟡"},
+    {"front": "🥭 आम", "back": "Mango (आम)", "example": "फलों का राजा 👑"},
+    {"front": "🍊 संतरा", "back": "Orange (संतरा)", "example": "खट्टा-मीठा 🟠"},
+    {"front": "🍇 अंगूर", "back": "Grapes (अंगूर)", "example": "छोटे-छोटे फल"},
+    {"front": "🍉 तरबूज", "back": "Watermelon (तरबूज)", "example": "बड़ा लाल फल 💧"},
+    {"front": "🍓 स्ट्रॉबेरी", "back": "Strawberry", "example": "छोटा लाल फल"}
+  ],
+  "simple_words_things": [
+    {"front": "🏠 घर", "back": "House (घर)", "example": "हम रहते हैं"},
+    {"front": "🚗 गाड़ी", "back": "Car (गाड़ी)", "example": "चलती है 🛣️"},
+    {"front": "📚 किताब", "back": "Book (किताब)", "example": "पढ़ने के लिए"},
+    {"front": "✏️ पेंसिल", "back": "Pencil (पेंसिल)", "example": "लिखने के लिए"},
+    {"front": "🎒 बस्ता", "back": "School Bag (बस्ता)", "example": "किताबें रखते हैं"},
+    {"front": "⚽ गेंद", "back": "Ball (गेंद)", "example": "खेलने के लिए"},
+    {"front": "🪑 कुर्सी", "back": "Chair (कुर्सी)", "example": "बैठने के लिए"},
+    {"front": "🛏️ पलंग", "back": "Bed (पलंग)", "example": "सोने के लिए"}
+  ]
+}

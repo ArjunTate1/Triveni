@@ -1,0 +1,35 @@
+[
+  {
+    "id": "DEMO_BALV_NUM_001",
+    "grade": "Balvatika",
+    "domain": "Numeracy",
+    "topic": "Number Recognition",
+    "competency": "संख्या पहचान और गिनती",
+    "learning_outcome": "बच्चे 1 से 10 तक की संख्याओं को पहचान सकते हैं और वस्तुओं को गिन सकते हैं।",
+    "skills": ["number_recognition", "counting", "one_to_one_correspondence"],
+    "activity_types": ["counting_objects", "number_matching", "number_tracing"],
+    "assessment_types": ["visual_counting", "number_identification"]
+  },
+  {
+    "id": "DEMO_BALV_LIT_001",
+    "grade": "Balvatika",
+    "domain": "Literacy",
+    "topic": "Letter Recognition",
+    "competency": "अक्षर पहचान और ध्वनि जागरूकता",
+    "learning_outcome": "बच्चे हिंदी वर्णमाला के स्वरों को पहचान सकते हैं।",
+    "skills": ["letter_recognition", "sound_awareness", "visual_discrimination"],
+    "activity_types": ["letter_tracing", "sound_matching", "picture_letter_association"],
+    "assessment_types": ["letter_identification", "sound_recognition"]
+  },
+  {
+    "id": "DEMO_BALV_NUM_002",
+    "grade": "Balvatika",
+    "domain": "Numeracy",
+    "topic": "Shapes",
+    "competency": "आकृति पहचान",
+    "learning_outcome": "बच्चे बुनियादी आकृतियों (वृत्त, त्रिकोण, वर्ग) को पहचान सकते हैं।",
+    "skills": ["shape_recognition", "visual_discrimination", "classification"],
+    "activity_types": ["shape_sorting", "shape_tracing", "shape_matching"],
+    "assessment_types": ["shape_identification", "shape_drawing"]
+  }
+]

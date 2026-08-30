@@ -1,0 +1,57 @@
+[
+  {
+    "id": "DEMO_G1_NUM_001",
+    "grade": "Grade 1",
+    "domain": "Numeracy",
+    "topic": "Numbers",
+    "competency": "संख्या पहचान और गिनती 1-20",
+    "learning_outcome": "बच्चे 1 से 20 तक की संख्याओं को पहचान सकते हैं, गिन सकते हैं और लिख सकते हैं।",
+    "skills": ["number_recognition", "counting", "number_writing", "number_sequencing"],
+    "activity_types": ["counting_objects", "number_line", "skip_counting"],
+    "assessment_types": ["number_dictation", "counting_assessment", "number_ordering"]
+  },
+  {
+    "id": "DEMO_G1_NUM_002",
+    "grade": "Grade 1",
+    "domain": "Numeracy",
+    "topic": "Addition",
+    "competency": "10 तक की संख्याओं का जोड़",
+    "learning_outcome": "बच्चे 10 तक की संख्याओं का जोड़ कर सकते हैं।",
+    "skills": ["addition", "number_sense", "mental_math"],
+    "activity_types": ["object_addition", "number_bonds", "story_problems"],
+    "assessment_types": ["addition_problems", "word_problems"]
+  },
+  {
+    "id": "DEMO_G1_NUM_003",
+    "grade": "Grade 1",
+    "domain": "Numeracy",
+    "topic": "Comparison",
+    "competency": "संख्याओं की तुलना",
+    "learning_outcome": "बच्चे दो समूहों में वस्तुओं की संख्या की तुलना कर सकते हैं और बता सकते हैं कि कौन बड़ा, छोटा या बराबर है।",
+    "skills": ["comparison", "number_sense", "more_less_equal"],
+    "activity_types": ["comparing_sets", "number_comparison", "size_ordering"],
+    "assessment_types": ["comparison_questions", "greater_lesser_identification"]
+  },
+  {
+    "id": "DEMO_G1_LIT_001",
+    "grade": "Grade 1",
+    "domain": "Literacy",
+    "topic": "Letters",
+    "competency": "हिंदी वर्णमाला पहचान और लेखन",
+    "learning_outcome": "बच्चे हिंदी वर्णमाला के सभी अक्षरों को पहचान सकते हैं और लिख सकते हैं।",
+    "skills": ["letter_recognition", "letter_writing", "sound_letter_correspondence"],
+    "activity_types": ["letter_tracing", "letter_formation", "sound_practice"],
+    "assessment_types": ["letter_dictation", "letter_identification", "sound_assessment"]
+  },
+  {
+    "id": "DEMO_G1_LIT_002",
+    "grade": "Grade 1",
+    "domain": "Literacy",
+    "topic": "Words",
+    "competency": "सरल शब्द पढ़ना",
+    "learning_outcome": "बच्चे दो और तीन अक्षर वाले सरल शब्दों को पढ़ सकते हैं।",
+    "skills": ["word_recognition", "decoding", "reading_fluency"],
+    "activity_types": ["word_building", "word_matching", "picture_word_association"],
+    "assessment_types": ["word_reading", "word_picture_matching"]
+  }
+]

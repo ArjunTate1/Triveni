@@ -1,0 +1,46 @@
+[
+  {
+    "id": "DEMO_G2_NUM_001",
+    "grade": "Grade 2",
+    "domain": "Numeracy",
+    "topic": "Numbers",
+    "competency": "संख्या पहचान और गिनती 1-100",
+    "learning_outcome": "बच्चे 1 से 100 तक की संख्याओं को पहचान सकते हैं और गिन सकते हैं।",
+    "skills": ["number_recognition", "counting", "place_value", "skip_counting"],
+    "activity_types": ["hundred_chart", "skip_counting_by_2_5_10", "number_patterns"],
+    "assessment_types": ["number_identification", "counting_by_tens", "number_sequencing"]
+  },
+  {
+    "id": "DEMO_G2_NUM_002",
+    "grade": "Grade 2",
+    "domain": "Numeracy",
+    "topic": "Addition and Subtraction",
+    "competency": "जोड़ और घटाव",
+    "learning_outcome": "बच्चे 20 तक की संख्याओं का जोड़ और घटाव कर सकते हैं।",
+    "skills": ["addition", "subtraction", "mental_math", "problem_solving"],
+    "activity_types": ["addition_subtraction_practice", "word_problems", "fact_families"],
+    "assessment_types": ["calculation_problems", "story_problems"]
+  },
+  {
+    "id": "DEMO_G2_LIT_001",
+    "grade": "Grade 2",
+    "domain": "Literacy",
+    "topic": "Reading",
+    "competency": "सरल वाक्य पढ़ना",
+    "learning_outcome": "बच्चे सरल वाक्यों को सही उच्चारण के साथ पढ़ सकते हैं।",
+    "skills": ["reading_fluency", "comprehension", "pronunciation"],
+    "activity_types": ["sentence_reading", "guided_reading", "read_aloud"],
+    "assessment_types": ["oral_reading", "comprehension_questions"]
+  },
+  {
+    "id": "DEMO_G2_LIT_002",
+    "grade": "Grade 2",
+    "domain": "Literacy",
+    "topic": "Writing",
+    "competency": "सरल वाक्य लिखना",
+    "learning_outcome": "बच्चे सरल वाक्य लिख सकते हैं।",
+    "skills": ["sentence_writing", "spelling", "grammar"],
+    "activity_types": ["sentence_formation", "picture_description", "creative_writing"],
+    "assessment_types": ["sentence_dictation", "picture_based_writing"]
+  }
+]

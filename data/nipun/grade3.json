@@ -1,0 +1,46 @@
+[
+  {
+    "id": "DEMO_G3_NUM_001",
+    "grade": "Grade 3",
+    "domain": "Numeracy",
+    "topic": "Numbers",
+    "competency": "संख्या पहचान और स्थानीय मान",
+    "learning_outcome": "बच्चे 1000 तक की संख्याओं को समझ सकते हैं और स्थानीय मान की अवधारणा को लागू कर सकते हैं।",
+    "skills": ["place_value", "number_representation", "expanded_form"],
+    "activity_types": ["place_value_chart", "number_decomposition", "expanded_notation"],
+    "assessment_types": ["place_value_identification", "number_representation"]
+  },
+  {
+    "id": "DEMO_G3_NUM_002",
+    "grade": "Grade 3",
+    "domain": "Numeracy",
+    "topic": "Multiplication",
+    "competency": "गुणा की बुनियादी समझ",
+    "learning_outcome": "बच्चे गुणा की अवधारणा को समझ सकते हैं और 2, 5, 10 की तालिकाओं को याद कर सकते हैं।",
+    "skills": ["multiplication", "times_tables", "repeated_addition"],
+    "activity_types": ["skip_counting", "array_models", "multiplication_stories"],
+    "assessment_types": ["multiplication_facts", "word_problems"]
+  },
+  {
+    "id": "DEMO_G3_LIT_001",
+    "grade": "Grade 3",
+    "domain": "Literacy",
+    "topic": "Reading Comprehension",
+    "competency": "पढ़ना और समझना",
+    "learning_outcome": "बच्चे छोटी कहानियों को पढ़ सकते हैं और समझ सकते हैं।",
+    "skills": ["reading_comprehension", "inference", "main_idea"],
+    "activity_types": ["story_reading", "comprehension_questions", "retelling"],
+    "assessment_types": ["comprehension_test", "oral_retelling"]
+  },
+  {
+    "id": "DEMO_G3_LIT_002",
+    "grade": "Grade 3",
+    "domain": "Literacy",
+    "topic": "Creative Writing",
+    "competency": "रचनात्मक लेखन",
+    "learning_outcome": "बच्चे अपने विचारों को लिखित रूप में व्यक्त कर सकते हैं।",
+    "skills": ["creative_writing", "paragraph_writing", "vocabulary"],
+    "activity_types": ["story_writing", "essay_writing", "descriptive_writing"],
+    "assessment_types": ["writing_sample", "creative_composition"]
+  }
+]

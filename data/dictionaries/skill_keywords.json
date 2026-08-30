@@ -1,0 +1,39 @@
+{
+  "cognitive_skills": {
+    "recognition": ["पहचानना", "पहचान", "जानना", "recognize", "recognition", "identify", "know"],
+    "understanding": ["समझना", "समझ", "understand", "understanding", "comprehend", "comprehension"],
+    "application": ["लागू करना", "उपयोग करना", "apply", "application", "use"],
+    "analysis": ["विश्लेषण", "जांचना", "analyze", "analysis", "examine"],
+    "synthesis": ["संश्लेषण", "मिलाना", "synthesize", "synthesis", "combine"],
+    "evaluation": ["मूल्यांकन", "आकलन", "evaluate", "evaluation", "assess", "assessment"]
+  },
+  "literacy_skills": {
+    "letter_recognition": ["अक्षर पहचान", "letter recognition", "recognize letters", "identify letters"],
+    "sound_awareness": ["ध्वनि जागरूकता", "sound awareness", "phonics", "phonemic awareness"],
+    "decoding": ["डिकोडिंग", "पढ़ना", "decode", "decoding", "read"],
+    "reading_fluency": ["पढ़ने का प्रवाह", "reading fluency", "fluent reading"],
+    "reading_comprehension": ["पढ़कर समझना", "reading comprehension", "understand", "comprehend"],
+    "vocabulary": ["शब्दावली", "vocabulary", "word knowledge"],
+    "writing": ["लिखना", "लेखन", "write", "writing"],
+    "spelling": ["वर्तनी", "spelling", "spell"],
+    "grammar": ["व्याकरण", "grammar"],
+    "oral_language": ["मौखिक भाषा", "oral language", "speaking", "listening"]
+  },
+  "numeracy_skills": {
+    "number_recognition": ["संख्या पहचान", "number recognition", "recognize numbers", "identify numbers"],
+    "counting": ["गिनना", "गिनती", "count", "counting"],
+    "number_sense": ["संख्या बोध", "number sense"],
+    "addition": ["जोड़", "add", "addition"],
+    "subtraction": ["घटाव", "subtract", "subtraction"],
+    "multiplication": ["गुणा", "multiply", "multiplication"],
+    "division": ["भाग", "divide", "division"],
+    "place_value": ["स्थानीय मान", "place value"],
+    "measurement": ["माप", "measure", "measurement"],
+    "geometry": ["ज्यामिति", "geometry", "shapes"],
+    "patterns": ["पैटर्न", "pattern", "patterns"],
+    "problem_solving": ["समस्या समाधान", "problem solving", "solve"],
+    "mental_math": ["मानसिक गणित", "mental math", "mental calculation"],
+    "estimation": ["अनुमान", "estimate", "estimation"],
+    "comparison": ["तुलना", "compare", "comparison"]
+  }
+}

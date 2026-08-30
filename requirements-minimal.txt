@@ -1,0 +1,5 @@
+# Minimal requirements for NIPUN Offline Terminal Prototype
+# Install with: pip install -r requirements-minimal.txt
+
+# PDF Generation (REQUIRED)
+reportlab==4.0.7

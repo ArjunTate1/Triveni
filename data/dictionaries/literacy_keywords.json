@@ -1,0 +1,74 @@
+{
+  "domain_keywords": [
+    "अक्षर", "letter", "letters",
+    "वर्ण", "character", "characters",
+    "शब्द", "word", "words",
+    "वाक्य", "sentence", "sentences",
+    "पढ़ना", "read", "reading",
+    "लिखना", "write", "writing",
+    "कहानी", "story", "stories",
+    "ध्वनि", "sound", "sounds", "phonics",
+    "चित्र", "picture", "pictures", "image",
+    "बोलना", "speak", "speaking",
+    "सुनना", "listen", "listening",
+    "समझना", "understand", "understanding", "comprehension"
+  ],
+  "topics": {
+    "letters": ["अक्षर", "वर्ण", "स्वर", "व्यंजन", "letter", "letters", "alphabet", "vowel", "vowels", "consonant", "consonants"],
+    "words": ["शब्द", "नाम", "word", "words", "vocabulary"],
+    "sentences": ["वाक्य", "लाइन", "sentence", "sentences", "line", "lines"],
+    "stories": ["कहानी", "कथा", "किस्सा", "story", "stories", "tale", "tales", "narrative"],
+    "sounds": ["ध्वनि", "आवाज", "उच्चारण", "sound", "sounds", "phonics", "pronunciation"],
+    "reading": ["पढ़ना", "पाठ", "read", "reading"],
+    "writing": ["लिखना", "लेखन", "write", "writing"],
+    "speaking": ["बोलना", "बोली", "speak", "speaking", "oral"],
+    "listening": ["सुनना", "श्रवण", "listen", "listening", "hearing"],
+    "comprehension": ["समझना", "अर्थ", "भावार्थ", "understand", "understanding", "comprehension", "meaning"],
+    "letter_recognition": ["अक्षर पहचान", "letter recognition", "identify letters", "recognize letters"],
+    "word_reading": ["शब्द पढ़ना", "word reading", "read words"],
+    "phonics": ["ध्वनि विज्ञान", "phonics", "sound awareness", "phonemic awareness"]
+  },
+  "skills": {
+    "letter_recognition": ["अक्षर पहचान", "वर्ण पहचान", "letter recognition", "recognize letters", "identify letters", "know letters"],
+    "sound_awareness": ["ध्वनि जागरूकता", "ध्वनि पहचान", "sound awareness", "phonics", "phonemic awareness", "sound recognition"],
+    "word_recognition": ["शब्द पहचान", "word recognition", "sight words", "recognize words"],
+    "reading": ["पढ़ना", "read", "reading"],
+    "writing": ["लिखना", "write", "writing"],
+    "comprehension": ["समझना", "अर्थ समझना", "understand", "understanding", "comprehension"],
+    "vocabulary": ["शब्दावली", "शब्द भंडार", "vocabulary", "word knowledge"],
+    "fluency": ["प्रवाह", "स्पष्टता", "fluency", "reading fluency"],
+    "spelling": ["वर्तनी", "हिज्जे", "spelling", "spell"],
+    "oral_expression": ["मौखिक अभिव्यक्ति", "oral expression", "speaking", "oral language"]
+  },
+  "action_verbs": [
+    "पढ़ना", "read",
+    "लिखना", "write",
+    "बोलना", "speak", "say", "tell",
+    "सुनना", "listen", "hear",
+    "समझना", "understand", "comprehend",
+    "पहचानना", "recognize", "identify",
+    "बताना", "tell", "explain",
+    "सुनाना", "narrate", "recite",
+    "दोहराना", "repeat",
+    "याद करना", "remember", "memorize", "recall",
+    "बनाना", "make", "form", "create",
+    "जोड़ना", "combine", "blend"
+  ],
+  "vowels": [
+    "अ", "आ", "इ", "ई", "उ", "ऊ", "ए", "ऐ", "ओ", "औ", "अं", "अः",
+    "a", "e", "i", "o", "u", "vowel", "vowels"
+  ],
+  "consonants": [
+    "क", "ख", "ग", "घ", "ङ",
+    "च", "छ", "ज", "झ", "ञ",
+    "ट", "ठ", "ड", "ढ", "ण",
+    "त", "थ", "द", "ध", "न",
+    "प", "फ", "ब", "भ", "म",
+    "य", "र", "ल", "व",
+    "श", "ष", "स", "ह",
+    "consonant", "consonants"
+  ],
+  "objects": {
+    "common": ["किताब", "book", "books", "कहानी", "story", "चित्र", "picture", "pictures"]
+  }
+}

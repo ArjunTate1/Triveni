@@ -1,0 +1,30 @@
+{
+  "literacy_topics": {
+    "letter_recognition": ["अक्षर", "वर्ण", "पहचान", "letter", "letters", "recognize", "recognition", "identify", "alphabet"],
+    "vowels": ["स्वर", "vowel", "vowels"],
+    "consonants": ["व्यंजन", "consonant", "consonants"],
+    "sound_awareness": ["ध्वनि", "आवाज", "sound", "sounds", "phonics", "phonemic"],
+    "word_reading": ["शब्द", "पढ़ना", "word", "words", "read", "reading"],
+    "sentence_reading": ["वाक्य", "पढ़ना", "sentence", "sentences", "read"],
+    "story_reading": ["कहानी", "पढ़ना", "story", "stories", "read", "narrative"],
+    "writing": ["लिखना", "लेखन", "write", "writing"],
+    "comprehension": ["समझना", "अर्थ", "understand", "understanding", "comprehension", "meaning"],
+    "vocabulary": ["शब्दावली", "vocabulary", "words"],
+    "oral_expression": ["मौखिक", "बोलना", "speak", "speaking", "oral", "talk"]
+  },
+  "numeracy_topics": {
+    "number_recognition": ["संख्या", "अंक", "पहचान", "number", "numbers", "recognize", "recognition", "digit", "digits", "identify"],
+    "counting": ["गिनना", "गिनती", "count", "counting", "enumerate"],
+    "addition": ["जोड़", "योग", "add", "addition", "plus", "sum"],
+    "subtraction": ["घटाव", "कम", "subtract", "subtraction", "minus", "take away"],
+    "multiplication": ["गुणा", "गुणन", "multiply", "multiplication", "times"],
+    "division": ["भाग", "बांटना", "divide", "division", "share"],
+    "shapes": ["आकार", "आकृति", "shape", "shapes", "geometry"],
+    "measurement": ["माप", "मापना", "measure", "measurement", "length", "weight", "height"],
+    "patterns": ["पैटर्न", "क्रम", "pattern", "patterns", "sequence"],
+    "time": ["समय", "घड़ी", "time", "clock", "hour", "minute"],
+    "money": ["पैसा", "रुपया", "money", "currency", "rupee", "coin"],
+    "comparison": ["तुलना", "अधिक", "कम", "compare", "comparison", "more", "less", "greater", "smaller"],
+    "place_value": ["स्थानीय मान", "place value", "tens", "ones", "hundreds"]
+  }
+}

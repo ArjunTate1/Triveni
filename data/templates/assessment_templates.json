@@ -1,0 +1,342 @@
+{
+  "numeracy": {
+    "counting": [
+      {
+        "question": "चित्र में कितने 🍎 सेब हैं? (चित्र दिखाएं)",
+        "answer": "varies",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "1 से 10 तक गिनती लिखो।",
+        "answer": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10",
+        "difficulty": "easy",
+        "marks": 5
+      },
+      {
+        "question": "कितने 🐕 कुत्ते दिख रहे हैं? गिनकर लिखो।",
+        "answer": "varies",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "⭐⭐⭐⭐⭐ तारों को गिनो और हिंदी में लिखो।",
+        "answer": "पाँच",
+        "difficulty": "medium",
+        "marks": 2
+      }
+    ],
+    "number_recognition": [
+      {
+        "question": "संख्या '7' को शब्दों में लिखो।",
+        "answer": "सात",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "'आठ' को अंकों में लिखो।",
+        "answer": "8",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "इन संख्याओं को बढ़ते क्रम में लगाओ: 5, 2, 8, 1, 6",
+        "answer": "1, 2, 5, 6, 8",
+        "difficulty": "medium",
+        "marks": 3
+      }
+    ],
+    "addition": [
+      {
+        "question": "2 + 3 = ?",
+        "answer": "5",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "4 + 5 = ?",
+        "answer": "9",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "🍎🍎 + 🍎🍎🍎 = कितने सेब?",
+        "answer": "5",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "रमेश के पास 🍬 3 टॉफी हैं। सुरेश ने उसे 🍬 4 और टॉफी दीं। अब रमेश के पास कुल कितनी टॉफी हैं?",
+        "answer": "7",
+        "difficulty": "medium",
+        "marks": 3
+      },
+      {
+        "question": "पेड़ पर 🐦 4 चिड़िया बैठी हैं। 🐦 3 और चिड़िया आकर बैठ गईं। अब कुल कितनी चिड़िया हैं?",
+        "answer": "7",
+        "difficulty": "medium",
+        "marks": 3
+      },
+      {
+        "question": "6 + 2 = ?",
+        "answer": "8",
+        "difficulty": "easy",
+        "marks": 2
+      }
+    ],
+    "subtraction": [
+      {
+        "question": "5 - 2 = ?",
+        "answer": "3",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "8 - 3 = ?",
+        "answer": "5",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "🍎🍎🍎🍎🍎 में से 🍎🍎 हटा दो। कितने बचे?",
+        "answer": "3",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "गीता के पास 🎈 7 गुब्बारे थे। 🎈 2 गुब्बारे फूट गए। कितने गुब्बारे बचे?",
+        "answer": "5",
+        "difficulty": "medium",
+        "marks": 3
+      },
+      {
+        "question": "10 - 4 = ?",
+        "answer": "6",
+        "difficulty": "medium",
+        "marks": 2
+      }
+    ],
+    "comparison": [
+      {
+        "question": "5 और 3 में से कौन बड़ा है?",
+        "answer": "5",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "रिक्त स्थान में >, < या = लगाओ: 7 ___ 4",
+        "answer": ">",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "🍎🍎🍎 और 🍌🍌🍌🍌🍌 - किसकी संख्या अधिक है?",
+        "answer": "केले (5 > 3)",
+        "difficulty": "medium",
+        "marks": 2
+      },
+      {
+        "question": "सबसे छोटी संख्या कौन सी है: 6, 2, 9, 4?",
+        "answer": "2",
+        "difficulty": "medium",
+        "marks": 2
+      },
+      {
+        "question": "8 ___ 8 (>, <, = में से सही चिन्ह लगाओ)",
+        "answer": "=",
+        "difficulty": "easy",
+        "marks": 2
+      }
+    ],
+    "shapes": [
+      {
+        "question": "⭕ यह कौन सी आकृति है?",
+        "answer": "वृत्त/गोला",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "🔺 में कितने कोने होते हैं?",
+        "answer": "3 (तीन)",
+        "difficulty": "medium",
+        "marks": 2
+      },
+      {
+        "question": "वर्ग की कितनी भुजाएं होती हैं?",
+        "answer": "4 (चार)",
+        "difficulty": "medium",
+        "marks": 2
+      },
+      {
+        "question": "⭕⭕⭕🔺⭕ - इनमें कितने वृत्त हैं?",
+        "answer": "4 (चार)",
+        "difficulty": "easy",
+        "marks": 2
+      }
+    ],
+    "patterns": [
+      {
+        "question": "पैटर्न पूरा करो: 2, 4, 6, 8, ___",
+        "answer": "10",
+        "difficulty": "medium",
+        "marks": 3
+      },
+      {
+        "question": "अगला क्या आएगा? 🔴🔵🔴🔵🔴___",
+        "answer": "🔵 (नीला)",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "रिक्त स्थान भरो: 1, 3, 5, ___, 9",
+        "answer": "7",
+        "difficulty": "medium",
+        "marks": 2
+      }
+    ],
+    "measurement": [
+      {
+        "question": "✏️ और 🖊️ में से कौन लंबा है? (चित्र देखकर)",
+        "answer": "varies",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "🐘 हाथी और 🐕 कुत्ते में से कौन बड़ा है?",
+        "answer": "हाथी",
+        "difficulty": "easy",
+        "marks": 2
+      }
+    ]
+  },
+  "literacy": {
+    "letter_recognition": [
+      {
+        "question": "यह कौन सा अक्षर है? 'अ'",
+        "answer": "अ",
+        "difficulty": "easy",
+        "marks": 1
+      },
+      {
+        "question": "इन अक्षरों को पहचानो और लिखो: क, ख, ग",
+        "answer": "क, ख, ग",
+        "difficulty": "easy",
+        "marks": 3
+      },
+      {
+        "question": "'म' अक्षर से शुरू होने वाले दो शब्द लिखो।",
+        "answer": "माँ, मछली (या अन्य)",
+        "difficulty": "medium",
+        "marks": 2
+      },
+      {
+        "question": "स्वर और व्यंजन में अंतर बताओ।",
+        "answer": "स्वर अकेले बोले जाते हैं, व्यंजन स्वर के साथ",
+        "difficulty": "hard",
+        "marks": 3
+      }
+    ],
+    "vowels": [
+      {
+        "question": "हिंदी में कितने स्वर होते हैं?",
+        "answer": "11 या 13 (अं, अः सहित)",
+        "difficulty": "medium",
+        "marks": 2
+      },
+      {
+        "question": "'आ' की मात्रा लगाकर लिखो: क + ा = ?",
+        "answer": "का",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "पहले पांच स्वर लिखो।",
+        "answer": "अ, आ, इ, ई, उ",
+        "difficulty": "easy",
+        "marks": 3
+      }
+    ],
+    "word_reading": [
+      {
+        "question": "इस शब्द को पढ़ो और अर्थ बताओ: 'घर' 🏠",
+        "answer": "घर (जहां हम रहते हैं)",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "दो अक्षर के तीन शब्द लिखो।",
+        "answer": "घर, नल, बस (या अन्य)",
+        "difficulty": "medium",
+        "marks": 3
+      },
+      {
+        "question": "'कमल' 🪷 शब्द में कितने अक्षर हैं?",
+        "answer": "3 (क, म, ल)",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "इन शब्दों को पढ़ो: 🐕 कुत्ता, 🐈 बिल्ली, 🐄 गाय",
+        "answer": "कुत्ता, बिल्ली, गाय",
+        "difficulty": "easy",
+        "marks": 3
+      }
+    ],
+    "writing": [
+      {
+        "question": "'अपना नाम हिंदी में लिखो।",
+        "answer": "varies (छात्र का नाम)",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "एक छोटा वाक्य लिखो: (राम, घर, गया)",
+        "answer": "राम घर गया।",
+        "difficulty": "medium",
+        "marks": 3
+      },
+      {
+        "question": "'क' से 'ङ' तक लिखो।",
+        "answer": "क, ख, ग, घ, ङ",
+        "difficulty": "easy",
+        "marks": 3
+      }
+    ],
+    "sentence_formation": [
+      {
+        "question": "इन शब्दों से एक वाक्य बनाओ: सीता, पढ़ती, है",
+        "answer": "सीता पढ़ती है।",
+        "difficulty": "medium",
+        "marks": 3
+      },
+      {
+        "question": "'🐕 कुत्ता' के बारे में एक वाक्य लिखो।",
+        "answer": "कुत्ता भौंकता है। (या अन्य)",
+        "difficulty": "medium",
+        "marks": 2
+      }
+    ],
+    "comprehension": [
+      {
+        "question": "कहानी पढ़ो और जवाब दो: 'राम स्कूल गया। वहाँ उसने पढ़ाई की।' - राम कहाँ गया?",
+        "answer": "स्कूल",
+        "difficulty": "easy",
+        "marks": 2
+      },
+      {
+        "question": "'🌞 सूरज पूर्व दिशा में निकलता है।' - सूरज किस दिशा में निकलता है?",
+        "answer": "पूर्व दिशा में",
+        "difficulty": "medium",
+        "marks": 2
+      }
+    ],
+    "rhyming": [
+      {
+        "question": "'बल' के साथ तुकबंदी वाले दो शब्द लिखो।",
+        "answer": "फल, चल (या अन्य)",
+        "difficulty": "medium",
+        "marks": 2
+      }
+    ]
+  }
+}

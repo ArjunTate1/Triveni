@@ -1,0 +1,77 @@
+{
+  "domain_keywords": [
+    "संख्या", "number", "numbers",
+    "गिनती", "counting", "count",
+    "गिनना", "count",
+    "जोड़", "addition", "add", "plus",
+    "घटाव", "subtraction", "subtract", "minus",
+    "गुणा", "multiplication", "multiply", "times",
+    "भाग", "division", "divide",
+    "आकार", "shape", "shapes",
+    "माप", "measurement", "measure",
+    "पैटर्न", "pattern", "patterns",
+    "समय", "time",
+    "पैसा", "money", "currency",
+    "आंकड़े", "data",
+    "तुलना", "comparison", "compare",
+    "अधिक", "more", "greater",
+    "कम", "less", "fewer",
+    "बराबर", "equal", "same"
+  ],
+  "topics": {
+    "numbers": ["संख्या", "अंक", "नंबर", "गिनती", "number", "numbers", "digit", "digits", "numeral"],
+    "counting": ["गिनना", "गिनती", "गणना", "count", "counting", "enumerate"],
+    "addition": ["जोड़", "योग", "जोड़ना", "मिलाना", "add", "addition", "plus", "sum", "total"],
+    "subtraction": ["घटाव", "घटाना", "कम करना", "subtract", "subtraction", "minus", "take away", "difference"],
+    "multiplication": ["गुणा", "गुणन", "गुना", "multiply", "multiplication", "times", "product"],
+    "division": ["भाग", "विभाजन", "बाँटना", "divide", "division", "share"],
+    "shapes": ["आकार", "आकृति", "वृत्त", "त्रिकोण", "वर्ग", "चतुर्भुज", "shape", "shapes", "circle", "triangle", "square", "rectangle"],
+    "measurement": ["माप", "मापना", "लंबाई", "भार", "क्षमता", "measure", "measurement", "length", "weight", "capacity", "height", "width"],
+    "patterns": ["पैटर्न", "क्रम", "नमूना", "pattern", "patterns", "sequence", "series"],
+    "time": ["समय", "घड़ी", "घंटा", "मिनट", "time", "clock", "hour", "minute", "hours", "minutes"],
+    "money": ["पैसा", "रुपया", "मुद्रा", "money", "currency", "rupee", "rupees", "coin", "coins"],
+    "data": ["आंकड़े", "डेटा", "चित्रलेख", "ग्राफ", "data", "graph", "chart", "pictograph"],
+    "comparison": ["तुलना", "अधिक", "कम", "बराबर", "बड़ा", "छोटा", "compare", "comparison", "more", "less", "equal", "greater", "smaller", "bigger", "larger"],
+    "number_recognition": ["पहचानना", "पहचान", "recognize", "recognition", "identify", "identification"],
+    "place_value": ["स्थानीय मान", "स्थान मूल्य", "place value", "tens", "ones", "hundreds"]
+  },
+  "skills": {
+    "number_recognition": ["पहचानना", "पहचान", "जानना", "recognize", "recognition", "identify", "identification", "know"],
+    "counting": ["गिनना", "गिनती", "count", "counting", "enumerate"],
+    "number_writing": ["लिखना", "लेखन", "write", "writing"],
+    "addition": ["जोड़", "जोड़ना", "add", "addition"],
+    "subtraction": ["घटाव", "घटाना", "subtract", "subtraction"],
+    "comparison": ["तुलना", "तुलना करना", "compare", "comparison"],
+    "place_value": ["स्थानीय मान", "स्थान मूल्य", "place value"],
+    "mental_math": ["मानसिक गणित", "मन में", "mental math", "mental calculation"],
+    "problem_solving": ["समस्या समाधान", "problem solving", "solve", "solving"]
+  },
+  "action_verbs": [
+    "पहचानना", "recognize", "identify",
+    "गिनना", "count",
+    "लिखना", "write",
+    "पढ़ना", "read",
+    "जोड़ना", "add",
+    "घटाना", "subtract",
+    "गुणा करना", "multiply",
+    "भाग देना", "divide",
+    "तुलना करना", "compare",
+    "समझना", "understand",
+    "सीखना", "learn",
+    "बताना", "tell", "explain",
+    "दिखाना", "show", "demonstrate",
+    "बनाना", "make", "create",
+    "हल करना", "solve"
+  ],
+  "ranges": {
+    "1_to_10": ["1 से 10", "एक से दस", "1 to 10", "one to ten"],
+    "1_to_20": ["1 से 20", "एक से बीस", "1 to 20", "one to twenty"],
+    "1_to_50": ["1 से 50", "एक से पचास", "1 to 50", "one to fifty"],
+    "1_to_100": ["1 से 100", "एक से सौ", "1 to 100", "one to hundred"],
+    "1_to_1000": ["1 से 1000", "एक से हजार", "1 to 1000", "one to thousand"]
+  },
+  "objects": {
+    "general": ["वस्तु", "वस्तुएं", "चीज", "object", "objects", "thing", "things", "item", "items"],
+    "common": ["सेब", "apple", "apples", "तारे", "star", "stars", "फूल", "flower", "flowers", "गुब्बारे", "balloon", "balloons"]
+  }
+}
